@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<style>
+    body {
+        font-family:  monospace;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .login-container {
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+        max-width: 400px;
+        width: 100%;
+        margin: auto; 
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .form-group label {
+        display: block;
+        color: #666;
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family:  monospace;
+    }
+
+    .btn-primary {
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <button class="btn-primary" asp-area="" asp-controller="Product" asp-action="ProductCatalogue">Login</button>
+    </form>
+</div>

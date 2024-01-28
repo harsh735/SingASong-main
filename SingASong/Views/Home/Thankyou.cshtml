@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Thank You!";
+
+}
+<head>
+    <style>
+        body {
+            font-family: monospace;
+            background-color: #f5f5f5;
+            margin-top: 5rem;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            margin: auto;
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 5px;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Thank You for registering</div>
+        <br>
+        <br>
+        <div class="message">
+            You can continue browsing through our products by logging in!
+        </div>
+        <br>
+        <br>
+        <button class="button btn-primary"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Login">Login</a></button>
+    </div>
+</body>
+

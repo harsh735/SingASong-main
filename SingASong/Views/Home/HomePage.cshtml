@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "SingASong Home Page";
+}
+
+<link rel="stylesheet" href="~/css/homepage.css" />
+
+<div class="container">
+    <div class="left-column">
+        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="SingASong Cover Photo" class="cover-photo"/>
+        <div class="cover-text">
+            <h1>SingASong</h1>
+        </div>
+    </div>
+
+    <div class="right-column">
+        <div class="content">
+            <h2>Join us today</h2>
+            <p>Your music journey begins here. Join SingASong and discover a world of melodies.</p>
+        </div>
+        <div class="buttons">
+            <a class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="Login">Login</a>
+            <a class="btn btn-success" asp-area="" asp-controller="Home" asp-action="Register">Register</a>
+        </div>
+    </div>
+</div>
