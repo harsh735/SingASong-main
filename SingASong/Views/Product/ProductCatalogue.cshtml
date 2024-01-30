@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Product Catalogef";
 }
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-vz5WsF+4QzC7F5pk3CpR86+nw7UvTVIkHva1RtxALOz2sxF2x98UOpPKa5l2aa3Z" crossorigin="anonymous">
+
 
 
 <style>
@@ -12,6 +12,36 @@
         padding: 0;
         display: flex;
     }
+
+    .search-bar {
+        position: fixed;
+        top: 0;
+        left: 25%;
+        width: 70%;
+        background-color: #f4f4f4;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .search-bar form {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-bar input {
+            width: 80%;
+            margin-right: 10px;
+        }
+
+        .search-bar button {
+            width: 20%;
+        }
 
     .navigation-bar {
         background-color: #333;
@@ -53,6 +83,7 @@
         text-align: center;
         width: 70%;
         margin-left: 25%;
+        margin-top: 60px;
     }
 
     .product {
@@ -102,13 +133,24 @@
     .add-to-cart:hover {
         background-color: #2980b9;
     }
+
+    .fa-solid{
+        padding: 10px;
+    }
+
 </style>
 
 <div class="navigation-bar">
-    <a asp-area="" asp-controller="Orders" asp-action="Cart">Cart</a>
-    <a href="#">Search</a>
-    <a href="#">Downloads</a>
-    <a href="#">View Profile</a>
+    <a asp-area="" asp-controller="Orders" asp-action="Cart"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
+    <a href="#"><i class="fa-solid fa-download"></i>Downloads</a>
+    <a href="#"><i class="fa-solid fa-user"></i>View Profile</a>
+</div>
+
+<div class="search-bar">
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Type here.." aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
 </div>
 
 <div class="product-container">

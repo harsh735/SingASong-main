@@ -10,4 +10,10 @@
     <Folder Include="wwwroot\lib\font-awesome\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+    <PackageReference Include="System.Linq" Version="4.3.0" />
+  </ItemGroup>
+
 </Project>

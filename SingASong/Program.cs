@@ -8,6 +8,7 @@ namespace SingASong
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            //var connectionString = builder.Configuration.GetConnectionString("ProductionDB") ?? throw new InvalidOperationException("Connnection string not found!");
 
             var app = builder.Build();
 
@@ -20,6 +21,8 @@ namespace SingASong
             }
 
             app.UseHttpsRedirection();
+            app.UseStaticFiles();
+
             app.UseStaticFiles();
 
             app.UseRouting();
