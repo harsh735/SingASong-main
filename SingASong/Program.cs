@@ -10,6 +10,8 @@ namespace SingASong
             builder.Services.AddControllersWithViews();
             //var connectionString = builder.Configuration.GetConnectionString("ProductionDB") ?? throw new InvalidOperationException("Connnection string not found!");
 
+            // Add authentication services
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -28,6 +30,7 @@ namespace SingASong
             app.UseRouting();
 
             app.UseAuthorization();
+            //app.UseAuthentication();
 
             app.MapControllerRoute(
                 name: "default",

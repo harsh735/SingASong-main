@@ -2,7 +2,7 @@
     ViewData["Title"] = "Product Catalogef";
 }
 
-
+@model List<Album>
 
 <style>
     body {
@@ -141,39 +141,31 @@
 </style>
 
 <div class="navigation-bar">
+    <a asp-controller="Product" asp-action="ProductCatalogue"><i class="fa-solid fa-home"></i>Home</a>
     <a asp-area="" asp-controller="Orders" asp-action="Cart"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
     <a href="#"><i class="fa-solid fa-download"></i>Downloads</a>
     <a href="#"><i class="fa-solid fa-user"></i>View Profile</a>
 </div>
 
 <div class="search-bar">
-    <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Type here.." aria-label="Search">
+    <form asp-action="ProductCatalogue" class="form-inline">
+        <input name="searchAlbumName" class="form-control mr-sm-2" type="search" placeholder="Type here.." aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
 </div>
 
 <div class="product-container">
-    @for (int i = 0; i < 10; i++)
+    @foreach(var album in Model)
     {
         <div class="product">
             <img src="https://placekitten.com/50/54" alt="Album Cover">
             <div class="product-details">
-                <h3>Album 1</h3>
-                <p>Artist: Arijit Singh</p>
-                <p>Price: ₹59.99</p>
-                <p>Rating: <span>4.5</span>/5</p>
-            </div>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
+                <h3>@album.AlbumName </h3>
+                <p>Artist: @album.ArtistName</p>
+                <p>Price: @album.AlbumPrice</p>
+                <p>Rating: @album.AlbumRating<span>4.5</span>/5</p>
+                <p>Release Date: @album.AlbumDate</p>
 
-        <div class="product">
-            <img src="https://placekitten.com/50/51" alt="Album Cover">
-            <div class="product-details">
-                <h3>Album 2</h3>
-                <p>Artist: Ed Sheeran</p>
-                <p>Price: ₹89.99</p>
-                <p>Rating: <span>4.8</span>/5</p>
             </div>
             <button class="add-to-cart">Add to Cart</button>
         </div>

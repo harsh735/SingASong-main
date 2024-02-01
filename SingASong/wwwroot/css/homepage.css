@@ -8,7 +8,6 @@
     display: flex;
     height: 120vh;
     padding: 0;
-    width: 100%;
 }
 
 .left-column {
@@ -36,7 +35,7 @@
 .right-column {
     margin-left: 5rem;
     flex: 1;
-    background-color: #ffffff; 
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
