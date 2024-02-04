@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQTest", "LINQTest\LINQTe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingASongAPI", "SingASongAPI\SingASongAPI.csproj", "{A35498BE-4F19-44C9-9AF1-779DC630043E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testing", "testing\testing.csproj", "{EFD64CB1-2742-4BA6-B40C-354882CA0002}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "testing", "testing\testing.csproj", "{EFD64CB1-2742-4BA6-B40C-354882CA0002}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

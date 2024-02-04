@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace SingASongAPI.Controllers
+namespace React_Core_Proj.Server.Controllers
 {
     [ApiController]
-    [Route("[controller]/[action]")]
+    [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -29,13 +29,5 @@ namespace SingASongAPI.Controllers
             })
             .ToArray();
         }
-
-
-        [HttpGet(Name = "TestingGet")]
-        public string NewGet(int id)
-        {
-            return "NewGet";
-        }
-
     }
 }

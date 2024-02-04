@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using SingASong.Models;
 using System.Diagnostics;
+using System.Text;
+using System.Text.Json;
+
 
 namespace SingASong.Controllers
 {
@@ -8,63 +11,115 @@ namespace SingASong.Controllers
 
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private HttpClient _client;
+        public HomeController()
         {
-            _logger = logger;
+            _client = new HttpClient();
+
         }
 
-        //[Authorize(Users="Harsh,Anshuman", Roles = "Admin")]
-        public IActionResult Index()
-        {
 
 
-            return View();
-        }
 
         public IActionResult HomePage()
         {
-
-            //string ConnectionString = "Data Source=G1-HPML114-L\\SQLEXPRESS;Initial Catalog=master;";
-            //SqlConnection con = new SqlConnection(ConnectionString);
-            //con.Open();
-            //SqlCommand cmd = new SqlCommand();
-            //SqlDataAdapter dbadapt = new SqlDataAdapter();
-            //dbadapt.SelectCommand.CommandType = CommandType.Text;
-            //dbadapt.SelectCommand.CommandText = "Select * from spt_fallback_db";
-            //dbadapt.SelectCommand.Connection = con;
-
-
-            //DataSet ds = new DataSet();
-            //dbadapt.Fill(ds);
-            //var model = ds.Tables[0];
-            //return View(model);
-
             return View();
         }
 
 
-        public IActionResult Login()
-        {
-            return View();
-        }
 
-
+        [HttpGet]
         public IActionResult Register()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpPost]
+        public async Task<IActionResult> Register(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                var content = new StringContent(JsonSerializer.Serialize(user), Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await _client.PostAsync("https://localhost:7238/api/User/Register", content);
+                if (response.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("Login");
+                }
+            }
+            return View(user);
+        }
+
+
+
+
+        [HttpGet]
+        public IActionResult Login()
         {
             return View();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(User user)
+        {
+            var content = new StringContent(JsonSerializer.Serialize(user), Encoding.UTF8, "application/json");
+            HttpResponseMessage response = await _client.PostAsync("https://localhost:7238/api/User/Login", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var data = await response.Content.ReadAsStringAsync();
+                var authenticatedUser = JsonSerializer.Deserialize<User>(data);
+
+                // Log user details
+                Console.WriteLine($"Authenticated User: {JsonSerializer.Serialize(authenticatedUser)}");
+
+                HttpContext.Session?.SetInt32("UserID", authenticatedUser?.userID ?? 0);
+                HttpContext.Session?.SetString("UserName", authenticatedUser?.userName ?? "");
+                HttpContext.Session.SetString("UserEmail", authenticatedUser.userEmail);
+                HttpContext.Session.SetString("UserPhoneNo", authenticatedUser.userPhoneNo);
+                HttpContext.Session.SetString("UserAddress", authenticatedUser.userAddress);
+
+                if (authenticatedUser.isAdmin)
+                {
+                    // Log admin redirection
+                    Console.WriteLine("Redirecting to AdminPage");
+                    return RedirectToAction("AdminPage", "Admin");
+                }
+                else
+                {
+                    // Log user redirection
+                    Console.WriteLine("Redirecting to ProductCatalogue");
+                    return RedirectToAction("ProductCatalogue", "Product");
+                }
+            }
+            else
+            {
+                // Log API error
+                var error = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"API Error: {error}");
+
+                ModelState.AddModelError("LoginError", "Invalid username or password");
+                return View(user);
+            }
+        }
+
+
+
+
+
 
         public IActionResult Thankyou()
         {
             return View();
         }
+
+
+        [HttpGet]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Login", "Home");
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

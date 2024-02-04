@@ -2,6 +2,8 @@
     ViewData["Title"] = "Register";
 }
 
+@model User
+
 <style>
     body {
         font-family: monospace;
@@ -61,32 +63,32 @@
 
 <div class="register-container">
     <h2>Register</h2>
-    <form>
+    <form method="post">
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="UserName" name="UserName" required>
         </div>
 
         <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="UserEmail" name="UserEmail" required>
         </div>
 
         <div class="form-group">
             <label for="phone">Phone No</label>
-            <input type="tel" id="phone" name="phone" required>
+            <input type="tel" id="UserPhoneNo" name="UserPhoneNo" required>
         </div>
 
         <div class="form-group">
             <label for="address">Address</label>
-            <input type="text" id="address" name="address" required>
+            <input type="text" id="UserAddress" name="UserAddress" required>
         </div>
 
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="UserPassword" name="UserPassword" required>
         </div>
 
-        <button class="btn-primary" asp-area="" asp-controller="Home" asp-action="Thankyou">Register</button>
+        <button class="btn-primary" asp-area="" asp-controller="Home" asp-action="Register">Register</button>
     </form>
 </div>

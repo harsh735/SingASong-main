@@ -1,3 +1,5 @@
+using SingASong.Repository;
+
 namespace SingASong
 {
     public class Program
@@ -11,6 +13,14 @@ namespace SingASong
             //var connectionString = builder.Configuration.GetConnectionString("ProductionDB") ?? throw new InvalidOperationException("Connnection string not found!");
 
             // Add authentication services
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30); // Set your desired session timeout
+            });
+            var connectionString = builder.Configuration.GetConnectionString("DBConnection");
+            builder.Services.AddSingleton(new DBAccess(connectionString));
+            builder.Services.AddSingleton(new UserDataAccess(connectionString));
+
 
             var app = builder.Build();
 
@@ -31,7 +41,7 @@ namespace SingASong
 
             app.UseAuthorization();
             //app.UseAuthentication();
-
+            app.UseSession();
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=HomePage}/{id?}");

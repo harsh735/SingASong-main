@@ -2,6 +2,8 @@
     ViewData["Title"] = "Carts Page";
 }
 
+@model Cart
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +13,23 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6qXaFtg8V5ndbcgy5lFfkkSStJI2utYO"
           crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/styles.css"/>
+
+    <style>
+        .delete-button-cart {
+            background-color: #e61414;
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+}
+
+        .delete-button-cart:hover {
+            background-color: #580b0b;
+        }
+
+    </style>
 </head>
 <body>
 
@@ -23,69 +42,41 @@
                     <th>Artist</th>
                     <th>Price</th>
                     <th>Action</th>
+                    <!-- Add more columns as needed -->
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>
-                        <div class="d-flex align-items-center">
-                            <img src="https://placekitten.com/50/50" alt="Album 1" class="product-image">
-                            <span>Album 1</span>
-                        </div>
-                    </td>
-                    <td>Arijit Singh</td>
-                    <td>₹99.99</td>
-                    <td>
-                        <button class="btn btn-danger">Remove</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="d-flex align-items-center">
-                            <img src="https://placekitten.com/50/45" alt="Album 1" class="product-image">
-                            <span>Album 2</span>
-                        </div>
-                    </td>
-                    <td>Arijit Singh</td>
-                    <td>₹89.99</td>
-                    <td>
-                        <button class="btn btn-danger">Remove</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="d-flex align-items-center">
-                            <img src="https://placekitten.com/50/51" alt="Album 2" class="product-image">
-                            <span>Album 3</span>
-                        </div>
-                    </td>
-                    <td>Arijit Singh</td>
-                    <td>₹49.99</td>
-                    <td>
-                        <button class="btn btn-danger">Remove</button>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <div class="d-flex align-items-center">
-                            <img src="https://placekitten.com/50/58" alt="Album 2" class="product-image">
-                            <span>Single - 1</span>
-                        </div>
-                    </td>
-                    <td>Arijit Singh</td>
-                    <td>₹19.99</td>
-                    <td>
-                        <button class="btn btn-danger">Remove</button>
-                    </td>
-                </tr>
+                @foreach (var cartItem in Model.cartAlbum)
+                {
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <img src="https://placekitten.com/50/55" alt="@cartItem.albumName" class="product-image">
+                                <span>@cartItem.albumName</span>
+                            </div>
+                        </td>
+                        <td>@cartItem.artistName</td>
+                        <td>₹@cartItem.albumPrice.ToString("0.00")</td>
+                       <td>
+                            <form method="post" asp-action="DeleteFromCart">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="albumID" value="@cartItem.albumID" />
+                                <button type="submit" class="delete-button-cart">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
             </tbody>
         </table>
+        <div class="price-div">
+
+            <h4 style="color: #007bff">Total Price</h4>
+                ₹ @Model.price
+        </div>
         <div class="text-right">
             <button class="btn btn-secondary"><a class="nav-link text-light" asp-area="" asp-controller="Product" asp-action="ProductCatalogue">Continue Shopping</a></button>
-            <button class="btn btn-primary"><a class="nav-link text-light" asp-area="" asp-controller="Orders" asp-action="Payments">Proceed To Payment</a></button>
+            <button class="btn btn-primary"><a class="nav-link text-light" asp-area="" asp-controller="Orders" asp-action="Payments">Proceed To Payment</a></button
         </div>
-
     </div>
 
 </body>

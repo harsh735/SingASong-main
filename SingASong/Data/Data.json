@@ -3,208 +3,200 @@
     "AlbumID": 2,
     "AlbumName": "Symphony Dreams",
     "ArtistName": "Sonic Serenades",
-    "AlbumDate": "2022-02-15T00:00:00",
     "AlbumPrice": 899.50,
-    "AlbumRating": 4.8
+    "AlbumRating": 4.8,
+    "AlbumGenre": "Classical"
   },
   {
     "AlbumID": 3,
     "AlbumName": "Rhythmic Reverie",
     "ArtistName": "Beat Bliss",
-    "AlbumDate": "2022-03-05T00:00:00",
     "AlbumPrice": 749.99,
-    "AlbumRating": 4.2
+    "AlbumRating": 4.2,
+    "AlbumGenre": "Pop"
   },
   {
     "AlbumID": 4,
     "AlbumName": "Harmonic Fusion",
     "ArtistName": "Melody Makers",
-    "AlbumDate": "2022-04-20T00:00:00",
     "AlbumPrice": 999.00,
-    "AlbumRating": 4.7
+    "AlbumRating": 4.7,
+    "AlbumGenre": "Rock"
   },
   {
     "AlbumID": 5,
     "AlbumName": "Epic Euphony",
     "ArtistName": "Sound Synthesis",
-    "AlbumDate": "2022-05-10T00:00:00",
     "AlbumPrice": 649.99,
-    "AlbumRating": 4.4
+    "AlbumRating": 4.4,
+    "AlbumGenre": "Electronic"
   },
   {
     "AlbumID": 6,
     "AlbumName": "Tranquil Tunes",
     "ArtistName": "Harmony Harmony",
-    "AlbumDate": "2022-06-02T00:00:00",
     "AlbumPrice": 799.99,
-    "AlbumRating": 4.6
+    "AlbumRating": 4.6,
+    "AlbumGenre": "Jazz"
   },
   {
     "AlbumID": 7,
     "AlbumName": "Sonic Serenity",
     "ArtistName": "Rhythm Rhapsody",
-    "AlbumDate": "2022-07-15T00:00:00",
     "AlbumPrice": 899.50,
-    "AlbumRating": 4.9
+    "AlbumRating": 4.9,
+    "AlbumGenre": "Classical"
   },
   {
     "AlbumID": 8,
     "AlbumName": "Harmony Horizon",
     "ArtistName": "Melody Mingle",
-    "AlbumDate": "2022-08-20T00:00:00",
     "AlbumPrice": 749.99,
-    "AlbumRating": 4.3
+    "AlbumRating": 4.3,
+    "AlbumGenre": "Pop"
   },
   {
     "AlbumID": 9,
     "AlbumName": "Ethereal Ensemble",
     "ArtistName": "Sound Symphony",
-    "AlbumDate": "2022-09-05T00:00:00",
     "AlbumPrice": 999.00,
-    "AlbumRating": 4.8
+    "AlbumRating": 4.8,
+    "AlbumGenre": "Rock"
   },
   {
     "AlbumID": 10,
     "AlbumName": "Mellow Melodies",
     "ArtistName": "Harmony Haven",
-    "AlbumDate": "2022-10-12T00:00:00",
     "AlbumPrice": 649.99,
-    "AlbumRating": 4.2
+    "AlbumRating": 4.2,
+    "AlbumGenre": "Electronic"
   },
   {
     "AlbumID": 11,
     "AlbumName": "Serenade Sounds",
     "ArtistName": "Rhythmic Resonance",
-    "AlbumDate": "2022-11-25T00:00:00",
     "AlbumPrice": 799.99,
-    "AlbumRating": 4.5
+    "AlbumRating": 4.5,
+    "AlbumGenre": "Jazz"
   },
   {
     "AlbumID": 12,
     "AlbumName": "Harmonic Haven",
     "ArtistName": "Sonic Sanctuary",
-    "AlbumDate": "2022-12-10T00:00:00",
     "AlbumPrice": 899.50,
-    "AlbumRating": 4.7
+    "AlbumRating": 4.7,
+    "AlbumGenre": "Classical"
   },
   {
     "AlbumID": 13,
     "AlbumName": "Melody Medley",
     "ArtistName": "Beat Blissful",
-    "AlbumDate": "2023-01-02T00:00:00",
     "AlbumPrice": 749.99,
-    "AlbumRating": 4.6
+    "AlbumRating": 4.6,
+    "AlbumGenre": "Pop"
   },
   {
     "AlbumID": 14,
     "AlbumName": "Rhythm Rapture",
     "ArtistName": "Harmony Harmonize",
-    "AlbumDate": "2023-02-15T00:00:00",
     "AlbumPrice": 999.00,
-    "AlbumRating": 4.9
+    "AlbumRating": 4.9,
+    "AlbumGenre": "Rock"
   },
   {
     "AlbumID": 15,
     "AlbumName": "Epic Elegance",
     "ArtistName": "Sound Serenity",
-    "AlbumDate": "2023-03-20T00:00:00",
     "AlbumPrice": 649.99,
-    "AlbumRating": 4.4
+    "AlbumRating": 4.4,
+    "AlbumGenre": "Electronic"
   },
   {
     "AlbumID": 16,
     "AlbumName": "Tranquil Harmony",
     "ArtistName": "Rhythm Radiance",
-    "AlbumDate": "2023-04-10T00:00:00",
     "AlbumPrice": 799.99,
-    "AlbumRating": 4.8
+    "AlbumRating": 4.8,
+    "AlbumGenre": "Jazz"
   },
   {
     "AlbumID": 17,
     "AlbumName": "Sonic Symphony",
     "ArtistName": "Melody Magic",
-    "AlbumDate": "2023-05-02T00:00:00",
     "AlbumPrice": 899.50,
-    "AlbumRating": 4.2
+    "AlbumRating": 4.2,
+    "AlbumGenre": "Classical"
   },
   {
     "AlbumID": 18,
     "AlbumName": "Harmonic Horizon",
     "ArtistName": "Beat Blissful",
-    "AlbumDate": "2023-06-15T00:00:00",
     "AlbumPrice": 749.99,
-    "AlbumRating": 4.7
+    "AlbumRating": 4.7,
+    "AlbumGenre": "Pop"
   },
   {
     "AlbumID": 19,
     "AlbumName": "Ethereal Euphony",
     "ArtistName": "Sound Serenade",
-    "AlbumDate": "2023-07-20T00:00:00",
     "AlbumPrice": 999.00,
-    "AlbumRating": 4.3
+    "AlbumRating": 4.3,
+    "AlbumGenre": "Rock"
   },
   {
     "AlbumID": 20,
     "AlbumName": "Mystic Melodies",
     "ArtistName": "Harmony Harmony",
-    "AlbumDate": "2023-08-05T00:00:00",
     "AlbumPrice": 649.99,
-    "AlbumRating": 4.5
+    "AlbumRating": 4.5,
+    "AlbumGenre": "Electronic"
   },
   {
     "AlbumID": 21,
     "AlbumName": "test",
     "ArtistName": "jajaj",
-    "AlbumDate": "0001-01-01T00:00:00",
     "AlbumPrice": 800.0,
-    "AlbumRating": 1.0
+    "AlbumRating": 1.0,
+    "AlbumGenre": "Experimental"
   },
   {
     "AlbumID": 22,
     "AlbumName": "harsh",
     "ArtistName": "harshendra",
-    "AlbumDate": "0001-01-01T00:00:00",
     "AlbumPrice": 800.0,
-    "AlbumRating": 3.0
+    "AlbumRating": 3.0,
+    "AlbumGenre": "Alternative"
   },
   {
     "AlbumID": 23,
     "AlbumName": "incedo",
     "ArtistName": "incedo",
-    "AlbumDate": "0001-01-01T00:00:00",
     "AlbumPrice": 900.0,
-    "AlbumRating": 4.0
-  },
-  {
-    "AlbumID": 24,
-    "AlbumName": "a",
-    "ArtistName": "a",
-    "AlbumDate": "0001-01-01T00:00:00",
-    "AlbumPrice": 6.0,
-    "AlbumRating": 2.0
+    "AlbumRating": 4.0,
+    "AlbumGenre": "Fusion"
   },
   {
     "AlbumID": 25,
     "AlbumName": "testing12",
     "ArtistName": "t12",
-    "AlbumDate": "0001-01-01T00:00:00",
     "AlbumPrice": 800.0,
-    "AlbumRating": 2.0
+    "AlbumRating": 2.0,
+    "AlbumGenre": "Rock"
   },
   {
     "AlbumID": 26,
     "AlbumName": "hello",
     "ArtistName": "hellooo",
-    "AlbumDate": "0001-01-01T00:00:00",
     "AlbumPrice": 100.0,
-    "AlbumRating": 2.0
+    "AlbumRating": 2.0,
+    "AlbumGenre": "Pop"
   },
   {
     "AlbumID": 27,
     "AlbumName": "hello",
     "ArtistName": "hellooo",
-    "AlbumDate": "0001-01-01T00:00:00",
     "AlbumPrice": 100.0,
-    "AlbumRating": 2.0
+    "AlbumRating": 2.0,
+    "AlbumGenre": "Pop"
   }
 ]

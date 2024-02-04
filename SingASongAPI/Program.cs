@@ -1,3 +1,5 @@
+using SingASongAPI.Repository;
+
 
 namespace SingASongAPI
 {
@@ -10,6 +12,11 @@ namespace SingASongAPI
             // Add services to the container.
 
             builder.Services.AddControllers();
+
+
+            var connectionString = builder.Configuration.GetConnectionString("DBConnection");
+            builder.Services.AddSingleton(new DBAccess(connectionString));
+            builder.Services.AddSingleton(new UserDataAccess(connectionString));
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

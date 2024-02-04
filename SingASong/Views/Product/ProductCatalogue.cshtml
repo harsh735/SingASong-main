@@ -4,6 +4,11 @@
 
 @model List<Album>
 
+@{
+    var userId = Context.Session.GetInt32("UserID");
+    var username = Context.Session.GetString("UserName");
+}
+
 <style>
     body {
         font-family: monospace;
@@ -141,33 +146,49 @@
 </style>
 
 <div class="navigation-bar">
+    <h5>Weclome, </h5>
+    <h5 style="margin-bottom: 40px">@username !</h5>
     <a asp-controller="Product" asp-action="ProductCatalogue"><i class="fa-solid fa-home"></i>Home</a>
     <a asp-area="" asp-controller="Orders" asp-action="Cart"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
-    <a href="#"><i class="fa-solid fa-download"></i>Downloads</a>
-    <a href="#"><i class="fa-solid fa-user"></i>View Profile</a>
+    <a asp-controller="Product" asp-action="UserProfile"><i class="fa-solid fa-user"></i>View Profile</a>
+    <a asp-controller="Home" asp-action="Logout"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+
 </div>
 
 <div class="search-bar">
-    <form asp-action="ProductCatalogue" class="form-inline">
-        <input name="searchAlbumName" class="form-control mr-sm-2" type="search" placeholder="Type here.." aria-label="Search">
+    <form method="get" asp-action="SearchAlbum" asp-controller="Product" class="form-inline">
+        <input name="searchAlbumId" class="form-control mr-sm-2" type="search" placeholder="Type here.." aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
 </div>
 
+
 <div class="product-container">
-    @foreach(var album in Model)
+    @foreach (var album in Model)
     {
         <div class="product">
-            <img src="https://placekitten.com/50/54" alt="Album Cover">
+            <img src="https://placekitten.com/50/55" alt="Album Cover">
             <div class="product-details">
-                <h3>@album.AlbumName </h3>
-                <p>Artist: @album.ArtistName</p>
-                <p>Price: @album.AlbumPrice</p>
-                <p>Rating: @album.AlbumRating<span>4.5</span>/5</p>
-                <p>Release Date: @album.AlbumDate</p>
+                <h3>@album.albumName</h3>
+                <p>Artist: @album.artistName</p>
+                <p>Price: @album.albumPrice</p>
+                <p>Rating: @album.albumRating<span></span>/5</p>
+                <p>Genre: <span>@album.albumGenre</span></p>
 
             </div>
-            <button class="add-to-cart">Add to Cart</button>
+
+            <form action="@Url.Action("AddToCart", "Orders")" method="post">
+                <input type="hidden" name="userID" value="@userId" />
+                <input type="hidden" name="albumID" value="@album.albumID" />
+
+                <button type="submit" class="add-to-cart">Add to Cart</button>
+            </form>
+        </div>
+    }
+    @if (ViewData["ErrorMessage"] != null)
+    {
+        <div class="error-message">
+            @ViewData["ErrorMessage"]
         </div>
     }
 </div>
