@@ -155,3 +155,29 @@ To deploy this project run
 - Select your Web API microservice directory as well as your MVC directory and click on start
 
 
+## Demo
+![image](https://github.com/harsh735/SingASong-main/assets/53695605/1e9e5c25-9b6f-45a4-8b4f-de6204d8a8c2)
+![image](https://github.com/harsh735/SingASong-main/assets/53695605/009c57ad-54e0-420a-9785-2989b4f9c08a)
+![image](https://github.com/harsh735/SingASong-main/assets/53695605/9e25375a-ee84-4b9f-b6de-9d516e166576)
+![image](https://github.com/harsh735/SingASong-main/assets/53695605/a61525a6-2a13-4470-af26-78cda2ad570f)
+![image](https://github.com/harsh735/SingASong-main/assets/53695605/0325881e-628c-4613-aa5c-26044f56a1d0)
+![image](https://github.com/harsh735/SingASong-main/assets/53695605/cbebe504-abf4-40e5-8860-630c104d9d59)
+![image](https://github.com/harsh735/SingASong-main/assets/53695605/f800c4ac-5668-40c1-8eed-7ea57e0464b5)
+
+### Search Album by Name
+![image](https://github.com/harsh735/SingASong-main/assets/53695605/3d22fbcc-6367-4d43-b171-fffbcdf494b5)
+
+
+
+### Admin Page
+![image](https://github.com/harsh735/SingASong-main/assets/53695605/9318a4a0-0145-40f7-9419-008dc536de92)
+### Add Album
+![image](https://github.com/harsh735/SingASong-main/assets/53695605/10036cbf-6dd7-45c3-a937-cb535f64946d)
+### Update Album
+![image](https://github.com/harsh735/SingASong-main/assets/53695605/3dc7cbdf-33d3-4276-a6b0-59c3f2bc4e0b)
+### Search Album by ID
+![image](https://github.com/harsh735/SingASong-main/assets/53695605/327692f3-e9a4-415e-b03f-60c15f2c3ec0)
+
+### Generate reports
+![image](https://github.com/harsh735/SingASong-main/assets/53695605/3e095238-54ef-4e03-bff0-01f64bc5c08a)
+
