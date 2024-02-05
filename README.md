@@ -156,12 +156,33 @@ To deploy this project run
 
 
 ## Demo
+
+### Home Page
 ![image](https://github.com/harsh735/SingASong-main/assets/53695605/1e9e5c25-9b6f-45a4-8b4f-de6204d8a8c2)
+
+
+### Login Page
 ![image](https://github.com/harsh735/SingASong-main/assets/53695605/009c57ad-54e0-420a-9785-2989b4f9c08a)
+
+
+### Product Catalogue Page
 ![image](https://github.com/harsh735/SingASong-main/assets/53695605/9e25375a-ee84-4b9f-b6de-9d516e166576)
+
+
+### Carts Page
 ![image](https://github.com/harsh735/SingASong-main/assets/53695605/a61525a6-2a13-4470-af26-78cda2ad570f)
+
+
+### Payments Method Page
 ![image](https://github.com/harsh735/SingASong-main/assets/53695605/0325881e-628c-4613-aa5c-26044f56a1d0)
+
+
+### Thank You Page
 ![image](https://github.com/harsh735/SingASong-main/assets/53695605/cbebe504-abf4-40e5-8860-630c104d9d59)
+
+
+
+### View User Profile page
 ![image](https://github.com/harsh735/SingASong-main/assets/53695605/f800c4ac-5668-40c1-8eed-7ea57e0464b5)
 
 ### Search Album by Name
