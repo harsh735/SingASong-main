@@ -15,7 +15,7 @@ Project developed by - Anshuman Tiwari,Harshendra Singh,Anuj Singh,Parichay Dawa
 - Delete the items from the cart
 - Authenticated Login and Registration
 - Admin Mode available for users that have admin access
-- Ability to Create,Read,Update and Delete albums through admin access
+- Ability to Create,Read,Update and Delete albums via Admin mode, made possible through ADO.NET and LINQ 
 - Search particular albums either by AlbumID or via AlbumName
 - Separate view to display Logged in user details via Session authorization
 - Separate functionality to view the albums sold under a certain time period , available only to the admin.
@@ -41,7 +41,7 @@ Improved error handling and response messages for actions like adding, updating,
  - Checked and validated user privileges, such as admin status, before performing certain actions.
 
  #### Validation:
- - Implemented model validation in MVC controllers to ensure that the data submitted to the server is valid before processing.
+ - Implemented model validation in MVC controllers to ensure that the data submitted to the server is valid before processing through Action Selectors and Data Annotations and other Tag Helpers
 
 #### Exception Handling:
 
