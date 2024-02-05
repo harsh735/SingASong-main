@@ -30,9 +30,9 @@ namespace SingASong.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult> SearchAlbum(int? searchAlbumId)
+        public async Task<ActionResult> SearchAlbumByName(string? searchAlbumName)
         {
-            HttpResponseMessage response = await _client.GetAsync($"https://localhost:7238/api/Admin/FetchAlbums/{searchAlbumId}");
+            HttpResponseMessage response = await _client.GetAsync($"https://localhost:7238/api/Admin/SearchAlbums/{searchAlbumName}");
             if (response.IsSuccessStatusCode)
             {
                 var data = await response.Content.ReadAsStringAsync();
@@ -51,7 +51,7 @@ namespace SingASong.Controllers
             else
             {
                 ViewData["ErrorMessage"] = "No matching albums found.";
-                return View("AdminPage", new List<Album>());
+                return View("ProductCatalogue", new List<Album>());
             }
         }
 

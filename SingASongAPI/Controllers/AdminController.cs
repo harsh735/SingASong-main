@@ -38,6 +38,22 @@ namespace SingASongAPI.Controllers
             return Ok(music);
         }
 
+
+        [HttpGet("SearchAlbums/{albumName}")]
+        public ActionResult<Album> GetSearchedAlbum(string? albumName)
+        {
+            var music = _dbDataAccess.GetAlbumByName(albumName);
+
+            if (music == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(music);
+        }
+
+
+
         //Working
         // POST: api/Music
         [HttpPost("AddAlbums")]

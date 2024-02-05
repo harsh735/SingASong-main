@@ -106,7 +106,7 @@ namespace SingASongAPI.Repository
 
 
 
-        public Album GetAlbumByName(string searchedAlbumName)
+        public Album GetAlbumByName(string? searchedAlbumName)
         {
 
             Album searchAlbum = null;
