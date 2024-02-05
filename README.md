@@ -4,7 +4,7 @@
 SingASong is an online music store which enables the user to buy albums from a variety of genre and artists. 
 Integrated through MSSQL and based on MVC Architecture , it was supported through several Microservices for admin, cart and user operations.
 
-Project developed by - Anshuman Tiwari,Harshendra Singh,Anuj Singh,Parichay Dawar
+Project developed by - Anshumaan Tiwari (609721), Harshendra Singh (609675),Anuj Singh (609715),Parichay Dawar (609718)
 // Team name : UP14.net
 
 
